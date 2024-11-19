@@ -69,10 +69,10 @@ a {
    justify-content: center;
    gap: 15px;  /* used to give space between children */
 }
-.iconsdiv{
+.iconsDiv{
   display: flex;
-  justify-content: center;
-  gap: 20px; /* used to give space between children */
+    justify-content: center;
+    gap: 20px;
 }
 .copyright{
   text-align: center;
