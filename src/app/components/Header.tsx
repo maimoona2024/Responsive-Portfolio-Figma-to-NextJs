@@ -1,18 +1,13 @@
 import Link from "next/link";
+import { NextFont } from "next/font/google"; // Import the type for better typing
 
 interface HeaderProps {
-  data?: {
-    font?: {
-      className?: string;
-    };
-  };
+  font: NextFont; // Expect a `font` prop of type `NextFont`
 }
 
-export default function Header({ data }: HeaderProps) {
-  const className = data?.font?.className || ""; // Use a fallback value if undefined
-
+export default function Header({ font }: HeaderProps) {
   return (
-    <div className={`${className} links-parent`}>
+    <div className={`${font.className} links-parent`}>
       <ul className="links">
         <li className="link">
           <Link href="">Works</Link>
@@ -27,5 +22,6 @@ export default function Header({ data }: HeaderProps) {
     </div>
   );
 }
+
 
   
